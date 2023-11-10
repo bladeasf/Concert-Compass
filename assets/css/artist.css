@@ -1,0 +1,6 @@
+.artist-pic {
+    margin-top: 50px;
+    width: 50%;
+    height: 80%;
+    filter: sepia(100%); /* filter the values to be consistent and match the theme of the site */
+}
