@@ -1,5 +1,22 @@
+: root{
+    --black: #0B090A;
+    --white: #FFFFFF;
+    --nav: #161A1D;
+    --primary: #BA181B;
+    --background: #D3D3D3;
+}
+
+* {
+    background-color: var(--background);
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
 .artist-pic {
-    margin-top: 50px;
+    margin-top: 10px;
     width: 50%;
     height: 80%;
     filter: sepia(100%); /* filter the values to be consistent and match the theme of the site */
