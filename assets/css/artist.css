@@ -1,23 +1,30 @@
-: root{
-    --black: #0B090A;
-    --white: #FFFFFF;
-    --nav: #161A1D;
-    --primary: #BA181B;
-    --background: #D3D3D3;
+: root {
+  --black: #0b090a;
+  --white: #ffffff;
+  --nav: #161a1d;
+  --primary: #ba181b;
+  --background: #d3d3d3;
 }
 
 * {
-    background-color: var(--background);
+  background-color: #d3d3d3;
 }
 
 #logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+#logo:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .artist-pic {
-    margin-top: 10px;
-    width: 50%;
-    height: 80%;
-    filter: sepia(100%); /* filter the values to be consistent and match the theme of the site */
+  margin-top: 10px;
+  width: 50%;
+  height: 80%;
+  /* filter: sepia(
+    100% */
+  /* ); filter the values to be consistent and match the theme of the site */
 }
