@@ -8,7 +8,7 @@
     <title>Document</title>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
+          <a class="navbar-item" href="#">
             <img class='logo' src="assets/Images/Logo.png">
           </a>
       
@@ -26,7 +26,7 @@
             </a>
       
             <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
+                <a class="navbar-link navbar-item">
                   Explore
                 </a>
                 <div class="navbar-dropdown">
@@ -42,7 +42,9 @@
               Cities
             </a>
       
-
+            <a class="dark-mode-btn">
+              <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+            </a>
               
             </div>
           </div>
@@ -57,6 +59,28 @@
       </nav>
 </head>
 <body>
+
+  <main>
+    <section id="search">
+        <input type="text" placeholder="Search here...">
+    </section>
+    <section id="leaderboard">
+        <h2>TOP 100 ARTISTS</h2>
+        <p>Genius API Leaderboard</p>
+    </section>
+    <aside>
+        <h3>OPTIONS</h3>
+        <div id="option1">
+            <p>SEATGEEK API</p>
+        </div>
+        <div id="option2">
+            <p>OPTION 2</p>
+        </div>
+        <div id="option3">
+            <p>OPTION 3</p>
+        </div>
+    </aside>
+</main>
     
 </body>
 </html>
