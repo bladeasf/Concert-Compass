@@ -1,26 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="assets/css/artist.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/artist.css" />
     <title>ConcertCompass</title>
-</head>
-<body>
-    <nav>
-        <a href="/index.html">
-            <img src="/assets/Images/Logo.png" alt="CC" id="logo">
-        </a>
+  </head>
+  <body>
+    <nav class="navbar-top">
+      <a href="/index.html">
+        <img src="/assets/Images/Logo.png" alt="CC" id="logo" />
+      </a>
     </nav>
     <main>
-    <figure class="artist-pic web mobile style="width: 50vh;"">
-    <img src="assets/Images/SZA Placeholder.jpeg" alt="SZA">
-    <p id="bio">SZA</p>
-    </figure>
-<article id="album-viewer">
+      <!-- container for artist pic+bio -->
+      <section class="artist">
+        <figure id="artist-pic">
+          <img src="assets/Images/SZA Placeholder.jpeg" alt="SZA" />
+        </figure>
+        <br />
+        <p id="bio">SZA</p>
+      </section>
 
-</article>
-</main>
-</body>
+      <!-- container for artist music + shows (overall)-->
+      <section id="viewer">
+      <nav>
+        <button>Music</button>
+        <button>Shows</button>
+      </nav>
+      <!-- container for artist music -->
+      <section class="music viewer">
+        <article class="album card">
+          <img
+            src="/assets/Images/SZA Placeholder.jpeg"
+            alt="'album name'"
+            class="card-image"
+          />
+          <ol class="card-content">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </article>
+      </section>
+
+      <!-- container for shows for that artist -->
+      <section class="shows viewer">
+        <article class="album card">
+          <img
+            src="/assets/Images/SZA Placeholder.jpeg"
+            alt="'album name'"
+            class="card-image"
+          />
+        </article>
+      </section>
+
+    </section>
+    </main>
+  </body>
 </html>
