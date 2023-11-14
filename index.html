@@ -8,7 +8,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Document</title>
+    <title>ConcertCompass</title>
+
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
@@ -38,10 +39,13 @@
               <a class="navbar-item"> Trending Artist </a>
               <a class="navbar-item"> Top 100 </a>
             </div>
+
             <a class="navbar-item"> Cities </a>
           </div>
           <div>
             <a class="dark-mode-btn">
+              <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                Dark Mode 
               <button id="theme-toggle" onclick="toggleDarkMode()">
                 Dark Mode
               </button>
@@ -62,9 +66,10 @@
       <section id="search">
         <input type="text" placeholder="Search here..." />
       </section>
+      
       <section id="leaderboard">
         <h2>TOP 100 ARTISTS</h2>
-        <p>Genius API Leaderboard</p>
+        <!-- Genius API Leaderboard -->
       </section>
       <aside>
         <h3>OPTIONS</h3>
@@ -79,5 +84,6 @@
         </div>
       </aside>
     </main>
+    <footer></footer>
   </body>
 </html>
