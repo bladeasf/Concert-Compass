@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="assets/css/artist.css" />
     <title>ConcertCompass</title>
   </head>
+
   <body>
+
     <nav class="navbar-top">
       <a href="/index.html">
         <img src="/assets/Images/Logo.png" alt="CC" id="logo" />
       </a>
     </nav>
+
     <main>
       <!-- container for artist pic+bio -->
       <section class="artist">
@@ -27,46 +30,50 @@
       </section>
 
       <!-- container for artist music + shows (overall)-->
-      <section id="viewer">
-      <nav>
-        <button>Music</button>
-        <button>Shows</button>
-      </nav>
-      <!-- container for artist music -->
-      <section class="music viewer">
-        <article class="album card">
-          <img
-            src="/assets/Images/SZA Placeholder.jpeg"
-            alt="'album name'"
-            class="card-image"
-          />
-          <ol class="card-content">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
-        </article>
-      </section>
+      <section  class="viewer">    
+         <div>
+          <button class="left">Music</button>
+          <button class="right">Shows</button>
+         </div>
+        <!-- container for artist music -->
+        <section class="music viewer">
+          <article class="album">
+            <img
+              src="/assets/Images/SZA Placeholder.jpeg"
+              alt="'album name'"
+              class="album-img"
+            />
+            <!-- TO DO: Pull Album Songs through API -->
+            <ol class="card-content">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </article>
+        </section>
 
-      <!-- container for shows for that artist -->
-      <section class="shows viewer">
-        <article class="album card">
-          <img
-            src="/assets/Images/SZA Placeholder.jpeg"
-            alt="'album name'"
-            class="card-image"
-          />
-        </article>
-      </section>
+        <!-- container for shows for that artist -->
+        <!-- TODO: fetch 'album name' from API -->
+        <!-- TODO: fetch 'artist img' from API -->
+        <section class="shows viewer">
+          <article class="album card">
+            <img
+              src="/assets/Images/SZA Placeholder.jpeg"
+              alt="'album name'"
+              class="card-image"
+            />
+          </article>
+        </section>
+        </section>
 
-    </section>
+      </section>
     </main>
   </body>
 </html>
