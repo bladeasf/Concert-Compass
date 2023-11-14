@@ -4,46 +4,46 @@ var song = 'Despacito'
 var geniusaccesstoken = 'bV013_46w1epTzjtcBvYXo509Yyu4RG28fcXDkW6KoBN2gwumQHBCQ4DfhdGfR67'
 var name = 'Justin Bieber'
 
-function test(){
-    var url ='https://api.seatgeek.com/2/performers/266?client_id=MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU'
-    fetch(url)
-          .then(response => response.json())
-          .then(data => {
-            // var topartist = {
-            //     name: data.name,
-            //     image: data.image,
-            //     genre: data.genres
-            // };
-            // console.log(topartist);
+// function test(){
+//     var url ='https://api.seatgeek.com/2/performers/266?client_id=MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU'
+//     fetch(url)
+//           .then(response => response.json())
+//           .then(data => {
+//             // var topartist = {
+//             //     name: data.name,
+//             //     image: data.image,
+//             //     genre: data.genres
+//             // };
+//             // console.log(topartist);
             
-            const sortedPerformers = data.performers.sort((a, b) => b.score - a.score);
+//             const sortedPerformers = data.performers.sort((a, b) => b.score - a.score);
 
 
-    const top3PerformerIds = sortedPerformers.slice(0, 3).map(performer => performer.id);
-    console.log(top3PerformerIds);
+//     const top3PerformerIds = sortedPerformers.slice(0, 3).map(performer => performer.id);
+//     console.log(top3PerformerIds);
         
-        })
+//         })
     
-}
+// }
 
-test();
-
-
-function test2(){
-    var geniusurl = 'https://api.genius.com/search?q='+name;
-    fetch(geniusurl, {
-        headers: {
-            'Authorization': 'Bearer '+geniusapikey,
-        },
-    })
-    .then(response => response.json())
-    .then(data => {
+// test();
 
 
+// function test2(){
+//     var geniusurl = 'https://api.genius.com/search?q='+name;
+//     fetch(geniusurl, {
+//         headers: {
+//             'Authorization': 'Bearer '+geniusapikey,
+//         },
+//     })
+//     .then(response => response.json())
+//     .then(data => {
 
 
-    }
-}
+
+
+//     }
+// }
 
 
 /*
