@@ -1,4 +1,15 @@
-.logo{
+:root{
+    --black: #0B090A;
+    --white: #FFFFFF;
+    --nav: #161A1D;
+    --primary: #BA181B;
+    --background: #D3D3D3;
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.5s;
 }
 
 body{
@@ -12,7 +23,7 @@ body{
      
 }
 
-#logo:hover{
+.logo:hover{
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
 }
@@ -22,9 +33,6 @@ body{
     font-weight:500;
 }
 
-.navbar-item:hover{
-    color: rgb(165, 49, 49);
-}
 
 #theme-toggle{
     position: absolute;
@@ -36,7 +44,9 @@ body{
 
 }
 
+
 body.dark-mode{
     background-color: #121111;
     color: #FFFFFF;
 }
+
