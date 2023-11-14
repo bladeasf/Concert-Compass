@@ -1,4 +1,4 @@
-: root{
+:root{
     --black: #0B090A;
     --white: #FFFFFF;
     --nav: #161A1D;
@@ -6,7 +6,11 @@
     --background: #D3D3D3;
 }
 
-
+body{
+    background-color: var(--background);
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.5s;
+}
 
 .navbar-item img {
     max-height: 3rem;
@@ -23,6 +27,21 @@
     font-weight:500;
 }
 
-.navbar-item:hover{
-    color: rgb(165, 49, 49);
+
+#theme-toggle{
+    position: absolute;
+    top: 10px;
+    right: -100px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+
 }
+
+body.dark-mode{
+    background-color: #121111;
+    color: #FFFFFF;
+}
+
+
+
