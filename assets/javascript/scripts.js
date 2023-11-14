@@ -34,6 +34,10 @@ function top100artists(){
     var artists = {
         namestring: ''
     }
-    
+  
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode")
+}
 //TO DO: 
 // TO DO: Code for artist.html functionality -- When I press the button(s) "Music" and "Shows" only one is selected and only one card is shown (ie Music ==> Newest Album + songs)
