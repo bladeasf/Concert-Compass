@@ -35,13 +35,16 @@ body{
     padding: 10px;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
-
+    border-radius: 3px;
 }
 
 
 .dark-mode{
-    background-color: #121111;
-    color: #FFFFFF;
+    background-color: #171616;
+    color: #bfbaba;
 } 
 
+#search{
+  padding: 10px;
+}
 
