@@ -30,34 +30,33 @@
       </section>
 
       <!-- container for artist music + shows (overall)-->
-      <section  class="viewer">    
-         <div>
-          <button class="left">Music</button>
-          <button class="right">Shows</button>
-         </div>
-        <!-- container for artist music -->
-        <section class="music viewer">
-          <article class="album">
-            <img
-              src="/assets/Images/SZA Placeholder.jpeg"
-              alt="'album name'"
-              class="album-img"
-            />
-            <!-- TO DO: Pull Album Songs through API -->
-            <ol class="card-content">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ol>
-          </article>
-        </section>
+      <section id="viewer">
+      <nav>
+        <button>Music</button>
+        <button>Shows</button>
+      </nav>
+      <!-- container for artist music -->
+      <section class="music viewer">
+        <article class="album card">
+          <img
+            src="/assets/Images/SZA Placeholder.jpeg"
+            alt="'album name'"
+            class="card-image"
+          />
+          <ol class="card-content">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+        </article>
+      </section>
 
         <!-- container for shows for that artist -->
         <!-- TODO: fetch 'album name' from API -->

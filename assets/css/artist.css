@@ -2,7 +2,7 @@
   --black: #0b090a;
   --white: #ffffff;
   --nav: #161a1d;
-  --primary: #ba181b;
+  --primary: #8c0f11;
   --background: #d3d3d3;
 }
 
@@ -94,4 +94,14 @@ button.left:active {
 button.right:active {
     border-radius: 0 50px 50px 0;
     background-color: var(--primary);
+}
+
+.button{
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -50px;
+  position: relative;
+  margin-left: 100px;
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--primary);
 }
