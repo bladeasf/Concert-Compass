@@ -19,41 +19,37 @@
       </a>
     </nav>
 
-    <main>
+    <main class="columns">
       <!-- container for artist pic+bio -->
-      <section class="artist">
+      <section class="artist column">
         <figure id="artist-pic">
           <img src="assets/Images/SZA Placeholder.jpeg" alt="SZA" />
         </figure>
-        <br />
-        <p id="bio">SZA</p>
+        <!-- <p id="bio">SZA</p> -->
       </section>
 
       <!-- container for artist music + shows (overall)-->
-      <section id="viewer">
-      <nav>
-        <button>Music</button>
-        <button>Shows</button>
-      </nav>
+      <div class="viewer | column">
+      <div class="box">
+        <button id="music-btn">Music</button>
+        <button id="shows-btn">Shows</button>
+      </div>
       <!-- container for artist music -->
-      <section class="music viewer">
-        <article class="album card">
-          <img
+      <section class="music-view box">
+        <article class="album">
+            <figure id="album-img" >
+                <img
             src="/assets/Images/SZA Placeholder.jpeg"
             alt="'album name'"
-            class="card-image"
+            class="alumb-img"
           />
+        </figure>
+          
           <ol class="card-content">
             <li></li>
             <li></li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+
           </ol>
         </article>
       </section>
@@ -61,8 +57,8 @@
         <!-- container for shows for that artist -->
         <!-- TODO: fetch 'album name' from API -->
         <!-- TODO: fetch 'artist img' from API -->
-        <section class="shows viewer">
-          <article class="album card">
+        <section class="shows-view">
+          <article class="card">
             <img
               src="/assets/Images/SZA Placeholder.jpeg"
               alt="'album name'"
@@ -71,7 +67,7 @@
           </article>
         </section>
         </section>
-
+</div>
       </section>
     </main>
   </body>
