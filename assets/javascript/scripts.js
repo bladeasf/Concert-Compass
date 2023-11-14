@@ -1,14 +1,68 @@
-var geniusapikey = '';
-var seatgeekapikey = '';
+var seatgeekapikey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU';
+var geniusapikey = 'QX7VONFEegZw3fbZ88_MxFJ7mnQknQFvRn8Qc9-5ykRJtZ7dNn5xOpZhx5OdoLQW'
+var song = 'Despacito'
+var geniusaccesstoken = 'bV013_46w1epTzjtcBvYXo509Yyu4RG28fcXDkW6KoBN2gwumQHBCQ4DfhdGfR67'
+var name = 'Justin Bieber'
+
+function test(){
+    var url ='https://api.seatgeek.com/2/performers/266?client_id=MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU'
+    fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            // var topartist = {
+            //     name: data.name,
+            //     image: data.image,
+            //     genre: data.genres
+            // };
+            // console.log(topartist);
+            
+            const sortedPerformers = data.performers.sort((a, b) => b.score - a.score);
 
 
+    const top3PerformerIds = sortedPerformers.slice(0, 3).map(performer => performer.id);
+    console.log(top3PerformerIds);
+        
+        })
+    
+}
+
+test();
+
+
+function test2(){
+    var geniusurl = 'https://api.genius.com/search?q='+name;
+    fetch(geniusurl, {
+        headers: {
+            'Authorization': 'Bearer '+geniusapikey,
+        },
+    })
+    .then(response => response.json())
+    .then(data => {}
+}
+
+
+/*
 function trendingartist(){
-    var apiurl = '';
+    var url = 'https://api.seatgeek.com/2/performers?client_id=';
     var topartist = {
-        name1: '',
-        name2: '',
-        name3: ''
-    }
+        'client_id': seatgeekapikey,
+        'sort': 'score.desc',
+      };
+
+      const url = new URL(url);
+      url.search = new URLSearchParams(topartist);
+      
+      fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // Perform your own sorting based on performer score
+        var sortedPerformers = data.performers.sort((a, b) => b.score - a.score);
+    
+        console.log('Sorted Performers:', sortedPerformers);
+        // Process the sorted performers list as needed
+      })
+      .catch(error => console.error('Error:', error));
+      
 }
 
 function upcomingconcerts(){
@@ -41,3 +95,5 @@ function toggleDarkMode() {
 }
 //TO DO: 
 // TO DO: Code for artist.html functionality -- When I press the button(s) "Music" and "Shows" only one is selected and only one card is shown (ie Music ==> Newest Album + songs)
+
+*/
