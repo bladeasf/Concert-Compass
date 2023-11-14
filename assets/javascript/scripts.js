@@ -37,7 +37,12 @@ function test2(){
         },
     })
     .then(response => response.json())
-    .then(data => {}
+    .then(data => {
+
+
+
+
+    }
 }
 
 
@@ -97,3 +102,13 @@ function toggleDarkMode() {
 // TO DO: Code for artist.html functionality -- When I press the button(s) "Music" and "Shows" only one is selected and only one card is shown (ie Music ==> Newest Album + songs)
 
 */
+var darkthemebutton = document.getElementById("theme-toggle");
+
+function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle("dark-mode");
+}
+
+darkthemebutton.addEventListener("click",function(){
+    toggleDarkMode();
+})

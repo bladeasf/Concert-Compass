@@ -12,12 +12,6 @@ body{
     transition: background-color 0.5s;
 }
 
-body{
-    background-color: var(--background);
-    font-family: 'Times New Roman', Times, serif;
-    transition: background-color 0.5s;
-}
-
 .navbar-item img {
     max-height: 3rem;
      
@@ -34,10 +28,10 @@ body{
 }
 
 
-#theme-toggle{
+ #theme-toggle{
     position: absolute;
     top: 10px;
-    right: -100px;
+    right: 10px;
     padding: 10px;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
@@ -45,9 +39,9 @@ body{
 }
 
 
-body.dark-mode{
+.dark-mode{
     background-color: #121111;
     color: #FFFFFF;
-}
+} 
 
 
