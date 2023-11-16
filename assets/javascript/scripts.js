@@ -4,6 +4,36 @@ var song = 'Despacito'
 var geniusaccesstoken = 'bV013_46w1epTzjtcBvYXo509Yyu4RG28fcXDkW6KoBN2gwumQHBCQ4DfhdGfR67'
 var name = 'Justin Bieber'
 
+
+
+
+function searchConcerts() {
+    var query = document.getElementById('searchBox').value;
+    var apiKey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU'; 
+    var url = `https://api.seatgeek.com/2/events?client_id=${apiKey}&q=${encodeURIComponent(query)}&taxonomies.name=concert`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => displayResults(data))
+        .catch(error => console.error('Error:', error));
+}
+
+function displayResults(data) {
+    var resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
+
+    if (data.events && data.events.length > 0) {
+        data.events.forEach(event => {
+            var div = document.createElement('div');
+            div.innerHTML = `Name: ${event.title}, Venue: ${event.venue.name}, Date: ${event.datetime_local}`;
+            resultsDiv.appendChild(div);
+        });
+    } else {
+        resultsDiv.innerHTML = 'No concerts found';
+    }
+}
+
+
 // function test(){
 //     var url ='https://api.seatgeek.com/2/performers/266?client_id=MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU'
 //     fetch(url)
