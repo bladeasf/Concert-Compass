@@ -12,12 +12,14 @@
   </head>
 
   <body>
-
-    <nav class="navbar-top">
-      <a href="/index.html">
-        <img src="/assets/Images/Logo.png" alt="CC" id="logo" />
+<header>
+    <nav class="navbar-top bg-nav">
+      <a href="/index.html" class="bg-nav">
+        <img src="/assets/Images/Logo.png" alt="CC" id="logo" class="bg-nav" />
       </a>
     </nav>
+</header>
+    
 
     <main class="columns">
       <!-- container for artist pic+bio -->
@@ -30,27 +32,35 @@
 
       <!-- container for artist music + shows (overall)-->
       <div class="viewer | column">
-      <div class="box">
+
+      <div class="btns | box">
         <button id="music-btn">Music</button>
         <button id="shows-btn">Shows</button>
       </div>
       <!-- container for artist music -->
-      <section class="music-view box">
+      <section class="music-view | box">
         <article class="album">
-            <figure id="album-img" >
+            <figure class="album-img" >
                 <img
             src="/assets/Images/SZA Placeholder.jpeg"
             alt="'album name'"
-            class="alumb-img"
+            id="alumb-img"
           />
         </figure>
-          
-          <ol class="card-content">
-            <li></li>
-            <li></li>
-            <li></li>
-
+          <div class="content">
+          <ol>
+            <li>Snooze</li>
+            <li>Kill Bill</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
           </ol>
+        </div>
         </article>
       </section>
 
@@ -70,5 +80,12 @@
 </div>
       </section>
     </main>
+    <footer>
+     <div class="bg-nav | columns">
+        <ul class="bg-nav | column">
+      
+        </ul>
+     </div>
+    </footer>
   </body>
 </html>
