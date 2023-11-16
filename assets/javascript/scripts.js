@@ -15,15 +15,15 @@ var name = 'Justin Bieber'
 //             //     genre: data.genres
 //             // };
 //             // console.log(topartist);
-            
+
 //             const sortedPerformers = data.performers.sort((a, b) => b.score - a.score);
 
 
 //     const top3PerformerIds = sortedPerformers.slice(0, 3).map(performer => performer.id);
 //     console.log(top3PerformerIds);
-        
+
 //         })
-    
+
 // }
 
 // test();
@@ -109,6 +109,6 @@ function toggleDarkMode() {
     body.classList.toggle("dark-mode");
 }
 
-darkthemebutton.addEventListener("click",function(){
+darkthemebutton.addEventListener("click", function () {
     toggleDarkMode();
 })

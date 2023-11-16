@@ -1,47 +1,41 @@
-:root{
-    --black: #0B090A;
-    --white: #FFFFFF;
-    --nav: #161A1D;
-    --primary: #BA181B;
-    --background: #D3D3D3;
+:root {
+  --black: #0b090a;
+  --white: #ffffff;
+  --nav: #161a1d;
+  --primary: #ba181b;
+  --background: #d3d3d3;
 }
 
-body{
-    background-color: var(--background);
-    font-family: 'Times New Roman', Times, serif;
-    transition: background-color 0.5s;
+body {
+  background-color: var(--background);
+  font-family: "Times New Roman", Times, serif;
+  transition: background-color 0.5s;
 }
 
 .navbar-item img {
-    max-height: 3rem;
-     
+  max-height: 3rem;
 }
 
-.logo:hover{
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;
+.logo:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
 }
 
-.navbar-item{
-    color:rgb(18, 17, 17);
-    font-weight:500;
+.navbar-item {
+  color: rgb(18, 17, 17);
+  font-weight: 500;
 }
 
-
- #theme-toggle{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10px;
-    cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
-
+#theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
 }
 
-
-.dark-mode{
-    background-color: #121111;
-    color: #FFFFFF;
-} 
-
-
+.dark-mode {
+  background-color: #121111;
+  color: #ffffff;
+}
