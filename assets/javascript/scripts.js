@@ -1,8 +1,14 @@
 var seatgeekapikey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU';
 var query = document.getElementById('searchBox').value;
 var input= encodeURIComponent(query);
+var artistbutton = document.querySelectorAll();
+var artist = artistbutton.dataset.name
 
 
+artistbutton.addEventListener("click", function () {
+    query = artist;
+    getSongList();
+})
 
 function getSongList(){
     var url = 'https://shazam.p.rapidapi.com/search?term='+input+'&locale=en-US&offset=0&limit=10';
@@ -22,8 +28,7 @@ fetch(url,options)
     console.log(songs)
     })
 }
-    
-getSongList();
+
 
 
 function searchConcerts() {
