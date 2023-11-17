@@ -75,7 +75,8 @@ function searchConcerts() {
         .then(response => response.json())
         .then(data => {
             displayResults(data) 
-            getSongList()
+            getSongList();
+            addToSearchHistory(query);
         })
         .catch(error => console.error('Error:', error));
 
@@ -97,6 +98,44 @@ function displayResults(data) {
     }
 }
 
+function addToSearchHistory(query) {
+    var searchHistory = JSON.parse(localstorage.getItem ('searchHistory')) || [];
+    searchHistory.unshift(query);
+    searchHistory.splice(5);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    displaySearchHistory();
+}
+
+function displaySearchHistory(){
+    var searchHistoryContainer = document.getElementById('search-history');
+    var searchHistroy = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    searchHistoryContainer.innerHTML = '';
+
+    if (searchHistroy.length > 0) {
+        var heading = document.createElementById('p');
+        heading.textcontent = 'search History:';
+
+        var list = dcument.createElement('ul');
+
+        searchHistory.foreach(query => {
+            var listitem = document.createElement('li');
+            listItem.textContent = query;
+            listItem.addEventListener('click', function (){
+                document.getElementById('searchBox').value = query;
+                searchConcerts();
+            });
+            list.appendChild(listItem);
+        });
+
+        searchHistoryContainer.appendChild(list);
+    } else {
+        var noSearchHistory = document.createElement('p');
+        noSearchHistory.textContent = 'No Search History';
+        searchHistoryContainer.appendChild(noSearchHistory);
+    }
+}
+
+displaySearchHistory();
 
 
 var darkthemebutton = document.getElementById("theme-toggle");
