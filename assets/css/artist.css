@@ -7,17 +7,16 @@
   --background: #d3d3d3;
 }
 
-* {
+/* * {
   background-color: var(--background);
-}
+} */
 
 /* -------------------------------------------- <<< Nav Css >>> -------------------------------------------------------- */
 .bg-nav {
-    background-color: var(--nav);
-    overflow: hidden;
+  background-color: var(--nav);
+  overflow: hidden;
 }
 nav {
-
   padding: 10px 0;
 }
 /* TO DO: Condense the logo and a properties to lessen how many times background color style is written */
@@ -42,65 +41,68 @@ nav {
     contrast(80%) blur(1px); /*filter for red primary color #ba181b color*/
 }
 
-
-
 /* ------------------------------------------ <<< Button CSS >>> --------------------------------------------------------- */
-
-button {
-  font-size: 1.25rem;
-  border: none;
-  padding: 10px 50px;
-  font-family: "Times New Roman", Times, serif;
-  position: relative;
-  /* color: var(--white); */
-  font-weight: bold;
-  /* background-color: var(--primary); */
-}
-
-button:active {
-  background-color: var(--accent);
-  color: var(--black);
-}
-
-#music-btn:active {
-  border-radius: 50px 0 0 50px;
-}
-
-#shows-btn:active {
-  border-radius: 0 50px 50px 0;
-}
-
-/* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
-
-.box {
+.btns {
   width: 70%;
   text-align: center;
   margin-left: 15%;
   margin-right: 15%;
 }
 
-.album {
+.btns.box {
+  padding: 20px;
+  background-color: var(--background);
+}
+
+button {
+  font-size: 1.25rem;
+  border: none;
+  padding: 10px 80px;
+  font-family: "Times New Roman", Times, serif;
   position: relative;
-  height: 400px;
-  /* width: 80%; */
-  align-items: center;
-  /* overflow: auto; */
+  /* color: var(--white); */
+  font-weight: bold;
+  background-color:transparent;
 }
-figure {
+
+.active {
+  background-image: linear-gradient(to right, var(--accent), purple);
+  color: var(--white);
+  border-radius: 6px;
+}
+
+button:active {
+  /* background-color: var(--accent); */
+  background-image: linear-gradient(to right, var(--accent), purple);
+  color: var(--white);
+  border-radius: 6px;
+}
+
+
+/* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
+
+
+.album-img-container {
+  width: 70%;
+  margin: 0 15%;
+  background-color: var(--background);
+}
+
+.album-img {
+  width: 40%;
+  margin: 0 31%;
   border-radius: 12px;
-  height: 50%;
-  width: 50%;
-}
-#album-img {
-  width: 100px;
-  height: 100px;
 }
 
 .music-view {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--background);
+  width: 70%;
+  margin: 0 15%;
+  height: 250px;
+  padding: 20px;
 }
 
 .shows-view {
@@ -108,7 +110,18 @@ figure {
 }
 
 .content {
-    overflow: auto;
-    height: 100px;
+  display: block;
+  overflow: auto;
+  width: 600px;
+  height: 200px;
+  border-radius: 12px;
+
 }
 
+ul {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
