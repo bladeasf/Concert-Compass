@@ -46,3 +46,30 @@ body {
   padding: 10px;
 }
 
+#searchBox{
+  margin-left: 10px;
+  padding: 5px;
+}
+
+#results{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+  padding: 50px;
+}
+
+/*.result-item{
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}*/
+
+
+
+
+
+
+

@@ -12,17 +12,13 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navbar-top bg-nav">
-        <a href="/index.html" class="bg-nav">
-          <img
-            src="/assets/Images/Logo.png"
-            alt="CC"
-            id="logo"
-            class="bg-nav"
-          />
-        </a>
-      </nav>
+<header>
+    <nav class="navbar-top bg-nav">
+      <a href="index.html" class="bg-nav">
+        <img src="assets/Images/Logo.png" alt="CC" id="logo" class="bg-nav" />
+      </a>
+    </nav>
+</header>
     
     </header>
 
@@ -45,29 +41,36 @@
         <figure class="album-img-container | box">
           <img
             src="./assets/Images/sza album placeholder.png"
+      <div class="btns | box">
+        <button id="music-btn">Music</button>
+        <button id="shows-btn">Shows</button>
+      </div>
+      <!-- container for artist music -->
+      <section class="music-view | box">
+        <article class="album">
+            <figure class="album-img" >
+                <img
+            src="assets/Images/SZA Placeholder.jpeg"
             alt="'album name'"
             class="album-img"
           />
         </figure>
-        <section class="music-view | box">
-          
-          <article class="album">
-            <div class="content">
-              <ul>
-                <li>Snooze</li>
-                <li>Kill Bill</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-                <li>[insert song here]</li>
-              </ul>
-            </div>
-          </article>
-        </section>
+          <div id= 'songcontainer' class="content">
+          <!-- <ol>
+            <li>Snooze</li>
+            <li>Kill Bill</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+            <li>[insert song here]</li>
+          </ol> -->
+        </div>
+        </article>
+      </section>
 
         <!-- container for shows for that artist -->
         <!-- TODO: fetch 'album name' from API -->
@@ -83,8 +86,14 @@
         </section>
       </div>
     </main>
-
-    <script src="./assets/javascript/scripts.js"></script>
+    <footer>
+     <div class="bg-nav | columns">
+        <ul class="bg-nav | column">
+      
+        </ul>
+     </div>
+    </footer>
+    <script src="assets/javascript/scripts.js"></script>
   </body>
 
   <footer>
