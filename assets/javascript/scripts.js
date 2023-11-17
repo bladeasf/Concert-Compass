@@ -1,10 +1,16 @@
 var seatgeekapikey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU';
-var query = document.getElementById('searchBox').value;
-var input= encodeURIComponent(query);
+// var artistbutton = document.querySelectorAll();
+// var artist = artistbutton.dataset.name
 
 
+// artistbutton.addEventListener("click", function () {
+//     query = artist;
+//     getSongList();
+// })
 
 function getSongList(){
+    var query = document.getElementById('searchBox').value;
+    var input= encodeURIComponent(query);
     var url = 'https://shazam.p.rapidapi.com/search?term='+input+'&locale=en-US&offset=0&limit=10';
     var options = {
         method: 'GET',
@@ -22,18 +28,23 @@ fetch(url,options)
     console.log(songs)
     })
 }
-    
-getSongList();
+
 
 
 function searchConcerts() {
-    
+    var query = document.getElementById('searchBox').value;
+    var input= encodeURIComponent(query);
     var url = 'https://api.seatgeek.com/2/events?client_id='+seatgeekapikey+'&q='+input+'&taxonomies.name=concert';
 
     fetch(url)
         .then(response => response.json())
-        .then(data => displayResults(data))
+        .then(data => {
+            displayResults(data) 
+            getSongList()
+        })
         .catch(error => console.error('Error:', error));
+
+        
 }
 
 function displayResults(data) {
