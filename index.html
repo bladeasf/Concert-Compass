@@ -1,94 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>ConcertCompass</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img class="logo" src="assets/Images/Logo.png" alt="ConcertCompass Logo" />
+                </a>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img class="logo" src="assets/Images/Logo.png" />
-        </a>
-
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="#"> Home </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link navbar-item"> Explore </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item"> Trending Artist </a>
-              <a class="navbar-item"> Top 100 </a>
+                <button
+                    class="navbar-burger"
+                    aria-label="menu"
+                    aria-expanded="false"
+                    data-target="navbarBasicExample"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
-           </div>
 
-            <a class="navbar-item"> Cities </a>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#" href="#">Home</a>
 
-          </div>
-          <div>
-            <a class="dark-mode-btn">
-              <!-- onclick="toggleDarkMode()" -->
-              <button id="theme-toggle">Dark Mode </button>
-            </a>
-          </div>
-        </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link navbar-item">Explore</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">Trending Artist</a>
+                            <a class="navbar-item">Top 100</a>
+                        </div>
+                    </div>
 
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons"></div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </head>
-  <body>
+                    <a class="navbar-item">Cities</a>
+
+                    <div class="dark-mode-toggle">
+                        <button id="theme-toggle">Dark Mode</button>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="buttons"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <main>
-      <section id="search">
-        <input type="text" placeholder="Search here..." />
-      </section>
+        <section id="search">
+            <input type="text" id="searchBox" placeholder="Search for concerts...">
+            <button onclick="searchConcerts()">Search</button>
+            <div id="results"></div>
+        </section>
 
-      <input type="text" id="searchBox" placeholder="Search for concerts...">
-<button onclick="searchConcerts()">Search</button>
-<div id="results"></div>
 
-      
-      <section id="leaderboard">
-        <h2>TOP 100 ARTISTS</h2>
-        <!-- Genius API Leaderboard -->
-      </section>
-      <aside>
-        <h3>OPTIONS</h3>
-        <div id="option1">
-          <p><a href="/artist.html">SZA</a></p>
-        </div>
-        <div id="option2">
-          <p>OPTION 2</p>
-        </div>
-        <div id="option3">
-          <p>OPTION 3</p>
-        </div>
-      </aside>
-    </main>
-    
     <script src="assets/javascript/scripts.js"></script>
-  </body>
+</body>
 </html>
