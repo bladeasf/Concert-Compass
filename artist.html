@@ -12,57 +12,56 @@
   </head>
 
   <body>
-<header>
-    <nav class="navbar-top bg-nav">
-      <a href="index.html" class="bg-nav">
-        <img src="assets/Images/Logo.png" alt="CC" id="logo" class="bg-nav" />
-      </a>
-    </nav>
-</header>
-    
+    <header>
+      <nav class="navbar-top bg-nav">
+        <a href="index.html" class="bg-nav">
+          <img src="assets/Images/Logo.png" alt="CC" id="logo" class="bg-nav" />
+        </a>
+      </nav>
+    </header>
 
     <main class="columns">
       <!-- container for artist pic+bio -->
       <section class="artist column">
-        <figure id="artist-pic">
-          <img src="assets/Images/SZA Placeholder.jpeg" alt="SZA" />
+        <figure>
+          <img id="artist-pic" src="/assets/Images/SZA Placeholder.png" alt="SZA" />
         </figure>
         <!-- <p id="bio">SZA</p> -->
       </section>
 
       <!-- container for artist music + shows (overall)-->
       <div class="viewer | column">
-
-      <div class="btns | box">
-        <button id="music-btn">Music</button>
-        <button id="shows-btn">Shows</button>
-      </div>
-      <!-- container for artist music -->
-      <section class="music-view | box">
-        <article class="album">
-            <figure class="album-img" >
-                <img
-            src="assets/Images/SZA Placeholder.jpeg"
-            alt="'album name'"
-            id="alumb-img"
-          />
-        </figure>
-          <div id= 'songcontainer' class="content">
-          <!-- <ol>
-            <li>Snooze</li>
-            <li>Kill Bill</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-            <li>[insert song here]</li>
-          </ol> -->
+        <div class="btns | box">
+          <button id="music-btn">Music</button>
+          <button id="shows-btn">Shows</button>
         </div>
-        </article>
-      </section>
+        <!-- container for artist music -->
+        <figure class="album-img-container | box">
+              <img
+                src="/assets/Images/sza album placeholder.png"
+                alt="'album name'"
+                id="album-img"
+              />
+            </figure>
+        <section class="music-view | box">
+          <article class="album">
+            
+            <div id="songcontainer" class="content">
+              <ol>
+                <li>Snooze</li>
+                <li>Kill Bill</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ol>
+            </div>
+          </article>
+        </section>
 
         <!-- container for shows for that artist -->
         <!-- TODO: fetch 'album name' from API -->
@@ -70,22 +69,20 @@
         <section class="shows-view">
           <article class="card">
             <img
-              src="assets/Images/SZA Placeholder.jpeg"
+              src="/assets/Images/SZA Placeholder.png"
               alt="'album name'"
               class="card-image"
             />
           </article>
         </section>
-        </section>
-</div>
-      </section>
+      </div>
     </main>
     <footer>
-     <div class="bg-nav | columns">
+      <div class="bg-nav | columns">
         <ul class="bg-nav | column">
-      
+          <li>GITHUB</li>
         </ul>
-     </div>
+      </div>
     </footer>
     <script src="assets/javascript/scripts.js"></script>
   </body>

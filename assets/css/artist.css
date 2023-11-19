@@ -5,11 +5,14 @@
   --primary: #8c0f11;
   --accent: #e5383b;
   --background: #d3d3d3;
+
+  --album_size: 125px
 }
 
-/* * {
-  background-color: var(--background);
-} */
+* {
+  /* background-color: var(--nav); */
+  font-family: 'Times New Roman', Times, serif;
+}
 
 /* -------------------------------------------- <<< Nav Css >>> -------------------------------------------------------- */
 .bg-nav {
@@ -37,8 +40,10 @@ nav {
 
 #artist-pic {
   width: 100%;
+  height: 80vh;
   filter: sepia(86%) saturate(3500%) hue-rotate(351deg) brightness(85%)
     contrast(80%) blur(1px); /*filter for red primary color #ba181b color*/
+    margin: 0;
 }
 
 /* ------------------------------------------ <<< Button CSS >>> --------------------------------------------------------- */
@@ -52,6 +57,8 @@ nav {
 .btns.box {
   padding: 20px;
   background-color: var(--background);
+  height: 10vh;
+  margin-top: 15px;
 }
 
 button {
@@ -84,13 +91,15 @@ button:active {
 
 .album-img-container {
   width: 70%;
+  height: 20vh;
   margin: 0 15%;
   background-color: var(--background);
 }
 
-.album-img {
-  width: 40%;
-  margin: 0 31%;
+#album-img {
+  width: var(--album_size);
+  height: var(--album_size);
+  margin: 0 37.5%;
   border-radius: 12px;
 }
 
@@ -101,8 +110,8 @@ button:active {
   background-color: var(--background);
   width: 70%;
   margin: 0 15%;
-  height: 250px;
-  padding: 20px;
+  height: 40vh;
+  padding: 10px;
 }
 
 .shows-view {
@@ -112,16 +121,21 @@ button:active {
 .content {
   display: block;
   overflow: auto;
-  width: 600px;
-  height: 200px;
+  width: 500px;
+  height: 300px;
   border-radius: 12px;
-
+text-align: center;
+font-size: 1.25rem;
 }
 
-ul {
+/* ul {
   text-align: center;
-}
+} */
 
 li {
   list-style: none;
+}
+
+footer {
+  
 }
