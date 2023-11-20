@@ -197,6 +197,10 @@ button:hover {
   margin-right: 35px;
 }
 
+.footer-links li {
+  list-style: none;
+}
+
 .copyright{
   color: #bfbaba;
 }
