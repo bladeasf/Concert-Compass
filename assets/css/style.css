@@ -9,30 +9,30 @@
   --accent: #e5383b;
 
 }
-
+/* Body Styling: Setting background, font, and transition properties for the entire page */
 body {
   background-color: var(--background);
   font-family: "Times New Roman", Times, serif;
   transition: background-color 0.5s;
   scroll-behavior: smooth;
 }
-
+/* Navbar Image Styling: Logo */
 .navbar-item img {
   max-height: 3rem;
 }
-
+/* Logo Hover Effect: Enlarging the logo on hover for an interactive effect */
 .logo:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
 }
-
+/* Navbar Item Styling: Font styling for navbar items */
 .navbar-item {
   color: rgb(18, 17, 17);
   font-weight: 700;
   font-size: 1.125rem;
 }
 
-
+/* Theme Toggle Button Styling: Positioning and styling the theme toggle button */
 #theme-toggle {
   position: absolute;
   top: 10px;
@@ -42,12 +42,12 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-
+/* Dark Mode Styling: Setting background and text color for dark mode */
 .dark-mode{
     background-color: var(--darkmode);
     color: #bfbaba;
 } 
-
+/* Search Box Styling */
 #search{
   padding: 10px;
 }
@@ -57,14 +57,14 @@ body {
   padding: 5px;
   margin-top: 10px;
 }
-
+/* Grid Layout for Search Results */
 #results{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 50px;
   padding: 50px;
 }
-
+/* Search History List Styling */
 #search-history .history-list {
   list-style-type: none;
   padding: 0;
@@ -76,20 +76,20 @@ body {
   margin-right: 10px;
   cursor: pointer;
 }
-
+/* Trending Section Styling */
 .trending {
   margin: 2%;
 }
 
 .trending-artists-header {
-  text-align: center; /* Center the text horizontally */
-  font-size: 2em;     /* Make the font size larger */
-  font-weight: bold;  /* Make the font bold */
-  margin-top: 20px;   /* Optional: Add some space above the header */
-  margin-bottom: 20px;/* Optional: Add some space below the header */
+  text-align: center; 
+  font-size: 2em;     
+  font-weight: bold;  
+  margin-top: 20px;   
+  margin-bottom: 20px;
 }
 
-
+/* Card Container and Card Styling for trending artists */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -124,7 +124,7 @@ body {
   font-size: large;
   margin: 10px 0; 
 }
-
+/* Footer Styling */
 .footer{
   background-color:var(--darkmode);
   color: var(--primary);
@@ -174,4 +174,19 @@ li{
 
 .hidden{
   visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar-burger {
+    display: block; 
+  }
+
+  .card-container {  
+    flex-direction: column; 
+  }
+
+  .card {
+    margin-bottom: 20px; 
+  }
 }
