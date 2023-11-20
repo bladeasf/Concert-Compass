@@ -170,3 +170,7 @@ body {
 li{
   list-style: none;
 }
+
+.hidden{
+  visibility: hidden;
+}
