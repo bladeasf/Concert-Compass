@@ -30,12 +30,13 @@ artistbutton.addEventListener("click", function () {
         localStorage.setItem('songs', JSON.stringify(songs));
         localStorage.setItem('avatar', avatar);
         localStorage.setItem('album', album)
-    
+        window.location.href = 'artist.html';
         })
+
+    });
+    });
     
-    });
-    });
-       
+
     
     function getSongList(){
         var query = document.getElementById('searchBox').value;
