@@ -112,6 +112,10 @@ button:hover {
   cursor: pointer;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 /* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
 
 .album-img-container {
