@@ -17,42 +17,48 @@ artistbutton.addEventListener("click", function () {
         }
     };
     
-fetch(url,options)
-.then(response => response.json())
-.then(data => {
-    var songs = data.tracks.hits.map(track => track.track.title);
-    console.log(songs)
-
-    localStorage.setItem('artist', artist);
-    localStorage.setItem('songs', JSON.stringify(songs));
-
-    })
-
-});
-});
-   
-
-function getSongList(){
-    var query = document.getElementById('searchBox').value;
-    var input= encodeURIComponent(query);
-    var url = 'https://shazam.p.rapidapi.com/search?term='+input+'&locale=en-US&offset=0';
-    var options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'd895bfd894msh4060f91589112cap1de30fjsn0d438392944d',
-            'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-        }
-    };
+    fetch(url,options)
+    .then(response => response.json())
+    .then(data => {
+        var songs = data.tracks.hits.map(track => track.track.title);
+        var avatar = data.tracks.hits[0].track.share.avatar;
+        console.log(songs)
+        console.log(avatar)
+        localStorage.setItem('artist', artist);
+        localStorage.setItem('songs', JSON.stringify(songs));
+        localStorage.setItem('avatar', avatar);
     
-fetch(url,options)
-.then(response => response.json())
-.then(data => {
-    var songs = data.tracks.hits.map(track => track.track.title);
-    console.log(songs)
-    localStorage.setItem('artist', query);
-    localStorage.setItem('songs', JSON.stringify(songs));
-    })
-}
+        })
+    
+    });
+    });
+       
+    
+    function getSongList(){
+        var query = document.getElementById('searchBox').value;
+        var input= encodeURIComponent(query);
+        var url = 'https://shazam.p.rapidapi.com/search?term='+input+'&locale=en-US&offset=0';
+        var options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': 'd895bfd894msh4060f91589112cap1de30fjsn0d438392944d',
+                'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
+            }
+        };
+        
+    fetch(url,options)
+    .then(response => response.json())
+    .then(data => {
+        var songs = data.tracks.hits.map(track => track.track.title);
+        var avatar = data.tracks.hits[0].track.share.avatar;
+        console.log(songs)
+        console.log(avatar)
+        localStorage.setItem('artist', query);
+        localStorage.setItem('songs', JSON.stringify(songs));
+        localStorage.setItem('avatar', avatar);
+        })
+    }
+    
 
 
 
