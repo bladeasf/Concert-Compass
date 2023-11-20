@@ -13,10 +13,63 @@
 
   <body>
     <header>
-      <nav class="navbar-top bg-nav">
-        <a href="index.html" class="bg-nav">
-          <img src="assets/Images/Logo.png" alt="CC" id="logo" class="bg-nav" />
-        </a>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <img
+              class="logo"
+              src="assets/Images/Logo.png"
+              alt="ConcertCompass Logo"
+            />
+          </a>
+
+          <button
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="./index.html">Home</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link navbar-item">Explore</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Trending Artist</a>
+                <a
+                  class="navbar-item"
+                  href="https://www.billboard.com/charts/hot-100/"
+                  >Top 100</a
+                >
+              </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link navbar-item">Cities</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">NYC</a>
+                <a class="navbar-item">ATL</a>
+                <a class="navbar-item">LA</a>
+              </div>
+            </div>
+
+            <!-- <div class="dark-mode-toggle">
+                      <button id="theme-toggle">Dark Mode</button>
+                  </div>
+              </div>
+
+              <div class="navbar-end">
+                  <div class="buttons"></div>
+              </div> -->
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -37,15 +90,10 @@
         </div>
         <!-- container for artist music -->
         <figure class="album-img-container | box">
-              <img
-                src=""
-                alt="'album name'"
-                id="album-img"
-              />
-            </figure>
+          <img src="" alt="'album name'" id="album-img" />
+        </figure>
         <section class="music-view | box">
           <article class="album">
-            
             <div id="songcontainer" class="content">
               <!-- <ol>
                 <li>Snooze</li>
@@ -68,24 +116,19 @@
         <!-- TODO: fetch 'artist img' from API -->
         <section class="shows-view">
           <article class="card">
-            <img
-              src=""
-              alt="'album name'"
-              class="card-image"
-            />
+            <img src="" alt="'album name'" class="card-image" />
           </article>
         </section>
       </div>
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="bg-nav | columns">
         <ul class="bg-nav | column">
           <li>GITHUB</li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="assets/javascript/artist.js"></script>
-
   </body>
 </html>
