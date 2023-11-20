@@ -1,7 +1,47 @@
 var seatgeekapikey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU';
 var artistbutton = document.querySelector('#redirect');
+// 
+function addToSearchHistory(query) {
+    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+    searchHistory.unshift(query);
+    searchHistory.splice(5);
+    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    displaySearchHistory();
+}
 
+function displaySearchHistory(){
+    var searchHistoryContainer = document.getElementById('search-history');
+    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
 
+    searchHistoryContainer.innerHTML = '';
+
+    if (searchHistory.length > 0) {
+        var heading = document.createElement('p');
+        heading.textContent = 'search History:';
+        searchHistoryContainer.appendChild(heading);
+
+        var list = document.createElement('ul');
+
+        searchHistory.foreach(query => {
+            var listItem = document.createElement('li');
+            listItem.textContent = query;
+            listItem.addEventListener('click', function (){
+                document.getElementById('searchBox').value = query;
+                searchConcerts();
+            });
+            list.appendChild(listItem);
+        });
+
+        searchHistoryContainer.appendChild(list);
+    } else {
+        var noSearchHistory = document.createElement('p');
+        noSearchHistory.textContent = 'No Recently Viewed Artists';
+        searchHistoryContainer.appendChild(noSearchHistory);
+    }
+}
+
+displaySearchHistory();
+// 
 artistbutton.addEventListener("click", function () {
     var artist = artistbutton.dataset.name;
     var input = encodeURIComponent(artist);
@@ -98,46 +138,7 @@ function displayResults(data) {
     }
 }
 
-function addToSearchHistory(query) {
-    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-    searchHistory.unshift(query);
-    searchHistory.splice(5);
-    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-    displaySearchHistory();
-}
 
-function displaySearchHistory(){
-    var searchHistoryContainer = document.getElementById('search-history');
-    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-
-    searchHistoryContainer.innerHTML = '';
-
-    if (searchHistory.length > 0) {
-        var heading = document.createElement('p');
-        heading.textContent = 'search History:';
-        searchHistoryContainer.appendChild(heading);
-
-        var list = dcument.createElement('ul');
-
-        searchHistory.foreach(query => {
-            var listItem = document.createElement('li');
-            listItem.textContent = query;
-            listItem.addEventListener('click', function (){
-                document.getElementById('searchBox').value = query;
-                searchConcerts();
-            });
-            list.appendChild(listItem);
-        });
-
-        searchHistoryContainer.appendChild(list);
-    } else {
-        var noSearchHistory = document.createElement('p');
-        noSearchHistory.textContent = 'No Recently Viewed Artists';
-        searchHistoryContainer.appendChild(noSearchHistory);
-    }
-}
-
-displaySearchHistory();
 
 
 var darkthemebutton = document.getElementById("theme-toggle");
