@@ -107,9 +107,9 @@ function displaySearchHistory(){
         heading.textContent = 'search History:';
         searchHistoryContainer.appendChild(heading);
 
-        var list = dcument.createElement('ul');
+        var list = document.createElement('ul');
 
-        searchHistory.foreach(query => {
+        searchHistory.forEach(query => {
             var listItem = document.createElement('li');
             listItem.textContent = query;
             listItem.addEventListener('click', function (){
