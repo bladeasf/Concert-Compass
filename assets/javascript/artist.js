@@ -27,8 +27,10 @@ document.getElementById('album-img').src = storedAlbum;
 
 
 
-function getMusic(){
-    window.location.replace("artist.html");
+function removeShows(){
+    var ol = document.getElementById("ol");
+    ol.remove();
+    
 }
 
 function removeMusic(){
@@ -49,6 +51,7 @@ if (storedConcerts.events.length == 0){
 }
 else{
     var ol = document.createElement('ol');
+    ol.setAttribute('id', 'ol');
     showscontainer.append(ol);
     for (var i = 0; i < storedConcerts.events.length; i++){
         var concertinfo = document.createElement('li');
@@ -60,7 +63,10 @@ else{
 }
 
 musicbutton.addEventListener("click", function () {
-    getMusic();
+    showsbutton.classList.remove("active");
+    musicbutton.classList.add("active");
+    removeShows();
+    populateSongList();
 })
 
 showsbutton.addEventListener("click", function () {
