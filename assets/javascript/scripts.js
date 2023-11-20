@@ -86,7 +86,7 @@ function displayResults(data) {
     if (data.events && data.events.length > 0) {
         data.events.forEach(event => {
             var div = document.createElement('div');
-            div.innerHTML = `Name: ${event.title}, Venue: ${event.venue.name}, Date: ${event.datetime_local}`;
+            div.innerHTML = `${event.title}, Venue: ${event.venue.name}, Date: ${event.datetime_local}`;
             resultsDiv.appendChild(div);
         });
     } else {
@@ -110,7 +110,8 @@ function displaySearchHistory(){
 
     if (searchHistory.length > 0) {
         var heading = document.createElement('p');
-        heading.textContent = 'search History:';
+        heading.textContent = 'Search History:';
+        heading.classList.add('history-list');
         searchHistoryContainer.appendChild(heading);
 
         var list = document.createElement('ul');
