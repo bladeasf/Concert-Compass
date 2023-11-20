@@ -58,7 +58,7 @@ artistbutton.addEventListener("click", function () {
         console.log(songs);
         console.log(avatar);
         console.log(album);
-        localStorage.setItem('artist', artist);
+        localStorage.setItem('artist', query);
         localStorage.setItem('songs', JSON.stringify(songs));
         localStorage.setItem('avatar', avatar);
         localStorage.setItem('album', album)
