@@ -25,6 +25,8 @@ Future Expectations:
 - Explore a wide variety of artists relating to the favorites
 - Add search options for major US cities
 
+- Link to Live Site: https://bladeasf.github.io/Project-1/
+
 
 
 <img width="1558" alt="Screenshot 2023-11-19 at 10 49 47 PM" src="https://github.com/bladeasf/Project-1/assets/145396887/3d9aacfc-e6de-41ea-96ee-007fcb38a935">
