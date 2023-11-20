@@ -6,6 +6,8 @@
   --background: #d3d3d3;
   --grey: #bfbaba;
   --darkmode: #171616;
+  --accent: #e5383b;
+
 }
 
 body {
@@ -126,7 +128,10 @@ body {
   background-color:var(--darkmode);
   color: var(--primary);
   padding: 20px 0;
-  border: 2px solid #bfbaba;
+  border-top: 2px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, var(--accent), purple);
 }
 
 .footer-section{
