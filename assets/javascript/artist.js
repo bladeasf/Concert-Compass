@@ -1,10 +1,11 @@
 var storedArtist = localStorage.getItem('artist');
 var storedSongs = JSON.parse(localStorage.getItem('songs'));
+var storedAvatar = localStorage.getItem('avatar');
 console.log("Stored Artist:", storedArtist);
 console.log("Stored Songs:", storedSongs);
+console.log("Stored Avatar:", storedAvatar);
 
 populateSongList();
-
 
 function populateSongList(){
     var songcontainer = document.getElementById("songcontainer");
