@@ -162,6 +162,44 @@ li {
   font-size: 30px;
 }
 
-/* footer {
-  
-} */
+/* ------------------------------------------ <<< Footer Section >>> ---------------------------------------------------- */
+
+
+.footer{
+  background-color: #161a1d;
+  color: #841d1d;
+  padding: 20px 0;
+}
+
+.footer-section{
+  margin-bottom: 20px;
+}
+
+.footer h3{
+  color: #d9d1d1;
+  font-weight: 900;
+}
+
+.footer a{
+  color: #bfbaba;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
+
+.footer p{
+  line-height: 1.5;
+}
+
+.content.has-text-centered{
+  margin: 20px;
+}
+
+.footer-links{
+  margin-right: 35px;
+}
+
+.copyright{
+  color: #bfbaba;
+}
