@@ -5,6 +5,7 @@
   --primary: #8c0f11;
   --accent: #e5383b;
   --background: #d3d3d3;
+  --grey: #bfbaba;
 
   --album_size: 125px;
 }
@@ -166,6 +167,10 @@ button:hover {
   background-color: #161a1d;
   color: #841d1d;
   padding: 20px 0;
+  border-top: 2px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to right, var(--accent), purple);
 }
 
 .footer-section{
