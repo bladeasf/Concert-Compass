@@ -23,7 +23,8 @@ body {
 
 .navbar-item {
   color: rgb(18, 17, 17);
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 
 
@@ -91,6 +92,10 @@ body {
   min-width: 200px; 
   margin: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card:hover {
+  cursor: pointer;
 }
 
 .card img {
