@@ -1,49 +1,12 @@
 var seatgeekapikey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU';
-var artistbutton = document.querySelector('#redirect');
-// 
-function addToSearchHistory(query) {
-    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-    searchHistory.unshift(query);
-    searchHistory.splice(5);
-    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
-    displaySearchHistory();
-}
 
-function displaySearchHistory(){
-    var searchHistoryContainer = document.getElementById('search-history');
-    var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+var artistbutton = document.querySelectorAll('.redirect');
 
-    searchHistoryContainer.innerHTML = '';
+artistbutton.forEach(function(artistbutton) {
 
-    if (searchHistory.length > 0) {
-        var heading = document.createElement('p');
-        heading.textContent = 'search History:';
-        searchHistoryContainer.appendChild(heading);
-
-        var list = document.createElement('ul');
-
-        searchHistory.foreach(query => {
-            var listItem = document.createElement('li');
-            listItem.textContent = query;
-            listItem.addEventListener('click', function (){
-                document.getElementById('searchBox').value = query;
-                searchConcerts();
-            });
-            list.appendChild(listItem);
-        });
-
-        searchHistoryContainer.appendChild(list);
-    } else {
-        var noSearchHistory = document.createElement('p');
-        noSearchHistory.textContent = 'No Recently Viewed Artists';
-        searchHistoryContainer.appendChild(noSearchHistory);
-    }
-}
-
-displaySearchHistory();
-// 
 artistbutton.addEventListener("click", function () {
-    var artist = artistbutton.dataset.name;
+        var artist = artistbutton.querySelector('.description').getAttribute('data-name');
+        console.log(artist);
     var input = encodeURIComponent(artist);
     var url = 'https://shazam.p.rapidapi.com/search?term='+input+'&locale=en-US&offset=0';
     var options = {
@@ -59,30 +22,15 @@ fetch(url,options)
 .then(data => {
     var songs = data.tracks.hits.map(track => track.track.title);
     console.log(songs)
+
+    localStorage.setItem('artist', artist);
+    localStorage.setItem('songs', JSON.stringify(songs));
+
     })
-    populateSongList()
-})
 
+});
+});
    
-
-
-
-function populateSongList(){
-    var songcontainer = document.getElementById("songcontainer");
-    var ol = document.createElement('ol');
-    songcontainer.append(ol);
-    for (var i = 0; i < songs.length; i++){
-        var songname = document.createElement('li');
-        songname.textContent = i+'. '+song[i];
-        ol.append(songname);
-    }
-    
-}
-
-
-
-
-
 
 function getSongList(){
     var query = document.getElementById('searchBox').value;
@@ -101,6 +49,8 @@ fetch(url,options)
 .then(data => {
     var songs = data.tracks.hits.map(track => track.track.title);
     console.log(songs)
+    localStorage.setItem('artist', query);
+    localStorage.setItem('songs', JSON.stringify(songs));
     })
 }
 
