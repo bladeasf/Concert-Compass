@@ -108,6 +108,7 @@ function displaySearchHistory(){
         searchHistoryContainer.appendChild(heading);
 
         var list = document.createElement('ul');
+        list.classList.add('history-list');
 
         searchHistory.forEach(query => {
             var listItem = document.createElement('li');
