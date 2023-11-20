@@ -80,6 +80,7 @@ function searchConcerts() {
             displayResults(data);
             getSongList();
             addToSearchHistory(query);
+            localStorage.setItem('concerts', JSON.stringify(data));
         })
         .catch(error => console.error('Error:', error));
 
@@ -95,6 +96,7 @@ function displayResults(data) {
             var div = document.createElement('div');
             div.innerHTML = `${event.title}, Venue: ${event.venue.name}, Date: ${event.datetime_local}`;
             resultsDiv.appendChild(div);
+            
         });
     } else {
         resultsDiv.innerHTML = 'No concerts found';
