@@ -12,7 +12,7 @@ artistbutton.addEventListener("click", function () {
     var options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'd895bfd894msh4060f91589112cap1de30fjsn0d438392944d',
+            'X-RapidAPI-Key': '20e60768c7msh9595729f27d6c0dp174686jsn662cf9de34dd',
             'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
         }
     };
@@ -57,7 +57,7 @@ artistbutton.addEventListener("click", function () {
         var options = {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': 'd895bfd894msh4060f91589112cap1de30fjsn0d438392944d',
+                'X-RapidAPI-Key': '20e60768c7msh9595729f27d6c0dp174686jsn662cf9de34dd',
                 'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
             }
         };
@@ -79,9 +79,10 @@ artistbutton.addEventListener("click", function () {
     }
     
 
-
+var discographybutton = document.querySelector('.hidden');
 
 function searchConcerts() {
+    
     var query = document.getElementById('searchBox').value;
     var input= encodeURIComponent(query);
     var url = 'https://api.seatgeek.com/2/events?client_id='+seatgeekapikey+'&q='+input+'&taxonomies.name=concert';
@@ -96,7 +97,7 @@ function searchConcerts() {
         })
         .catch(error => console.error('Error:', error));
 
-        
+    discographybutton.classList.remove("hidden");    
 }
 
 function displayResults(data) {
