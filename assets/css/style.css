@@ -175,3 +175,18 @@ li{
 .hidden{
   visibility: hidden;
 }
+
+@media screen and (max-width: 768px) {
+
+  .navbar-burger {
+    display: block; 
+  }
+
+  .card-container {  
+    flex-direction: column; 
+  }
+
+  .card {
+    margin-bottom: 20px; 
+  }
+}
