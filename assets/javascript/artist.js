@@ -43,12 +43,19 @@ console.log("storedConcerts:", storedConcerts);
 var showscontainer = document.getElementById("songcontainer");
 var ol = document.createElement('ol');
 showscontainer.append(ol);
-
-for (var i = 0; i < storedConcerts.events.length; i++){
+if (storedConcerts.events.length == 0){
     var concertinfo = document.createElement('li');
-    concertinfo.textContent = storedConcerts.events[i].title+ " " + storedConcerts.events[i].venue.name + " "+ storedConcerts.events[i].datetime_local;
+    concertinfo.textContent = 'No concerts found.'
     ol.append(concertinfo);
 }
+else{
+    for (var i = 0; i < storedConcerts.events.length; i++){
+        var concertinfo = document.createElement('li');
+        concertinfo.textContent = storedConcerts.events[i].title+ " " + storedConcerts.events[i].venue.name + " "+ storedConcerts.events[i].datetime_local;
+        ol.append(concertinfo);
+    }
+}
+
 }
 
 musicbutton.addEventListener("click", function () {
