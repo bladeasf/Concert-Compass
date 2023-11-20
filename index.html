@@ -29,7 +29,7 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="#">Home</a>
+                    <a class="navbar-item" href="#" href="#">Home</a>
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link navbar-item">Explore</a>
@@ -57,9 +57,35 @@
         <section id="search">
             <input type="text" id="searchBox" placeholder="Search for concerts...">
             <button onclick="searchConcerts()">Search</button>
+            <div id="search-history"></div>
             <div id="results"></div>
+            
         </section>
-
+        <h2 class="trending-artists-header">Trending Artists</h2>
+        <section class="card-container">
+            <article class="card">
+                <img src="./assets/Images/TAYLORSWIFTphoto Small.jpeg" alt="Taylor Swift">
+                <h3 class="card-title">Taylor Swift</h3> <!-- Title header added -->
+                <div class="description">"Taylor Swift is that rarest of pop phenomena: a superstar who managed to completely cross over from country to the mainstream, becoming an enduring pop culture icon..."</div>
+            </article>
+            <article class="card">
+                <img src="./assets/Images/KANYEWESTphoto Small.jpeg" alt="Kanye West">
+                <h3 class="card-title">Kanye West</h3> <!-- Title header added -->
+                <div class="description">"One of the most influential, critically-landed, and controversial artists of the 21st century, American rapper and producer Kanye West went from hip-hop beatmaker to worldwide hitmaker..."</div>
+            </article>
+            <article class="card">
+                <img src="./assets/Images/SZAphoto Small.jpeg" alt="SZA">
+                <h3 class="card-title">SZA</h3> <!-- Title header added -->
+                <div class="description">"A distinct force in contemporary R&B, SZA has set herself apart with a vulnerable and casually poetic songwriting style and a voice conveying a multitude of emotions with the subtle twists and turns."</div>
+            </article>
+            <article class="card">
+                <img src="image4.jpg" alt="Description of Image 4">
+                <h3 class="card-title">Title for Image 4</h3> <!-- Title header added -->
+                <div class="description">Description for Image 4</div>
+            </article>
+        </section>
+    </main>
+    
 
     <script src="assets/javascript/scripts.js"></script>
 </body>
