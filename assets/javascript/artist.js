@@ -48,9 +48,9 @@ if (storedConcerts.events.length == 0){
     showscontainer.append(concertinfo);
 }
 else{
+    var ol = document.createElement('ol');
+    showscontainer.append(ol);
     for (var i = 0; i < storedConcerts.events.length; i++){
-        var ol = document.createElement('ol');
-        showscontainer.append(ol);
         var concertinfo = document.createElement('li');
         concertinfo.textContent = storedConcerts.events[i].title+ " " + storedConcerts.events[i].venue.name + " "+ storedConcerts.events[i].datetime_local;
         ol.append(concertinfo);
