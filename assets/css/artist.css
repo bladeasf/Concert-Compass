@@ -5,19 +5,21 @@
   --primary: #8c0f11;
   --accent: #e5383b;
   --background: #d3d3d3;
+
+  --album_size: 125px
 }
 
 * {
-  background-color: var(--background);
+  /* background-color: var(--nav); */
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* -------------------------------------------- <<< Nav Css >>> -------------------------------------------------------- */
 .bg-nav {
-    background-color: var(--nav);
-    overflow: hidden;
+  background-color: var(--nav);
+  overflow: hidden;
 }
 nav {
-
   padding: 10px 0;
 }
 /* TO DO: Condense the logo and a properties to lessen how many times background color style is written */
@@ -38,69 +40,78 @@ nav {
 
 #artist-pic {
   width: 100%;
+  height: 80vh;
   filter: sepia(86%) saturate(3500%) hue-rotate(351deg) brightness(85%)
     contrast(80%) blur(1px); /*filter for red primary color #ba181b color*/
+    margin: 0;
 }
-
-
 
 /* ------------------------------------------ <<< Button CSS >>> --------------------------------------------------------- */
-
-button {
-  font-size: 1.25rem;
-  border: none;
-  padding: 10px 50px;
-  font-family: "Times New Roman", Times, serif;
-  position: relative;
-  /* color: var(--white); */
-  font-weight: bold;
-  /* background-color: var(--primary); */
-}
-
-button:active {
-  background-color: var(--accent);
-  color: var(--black);
-}
-
-#music-btn:active {
-  border-radius: 50px 0 0 50px;
-}
-
-#shows-btn:active {
-  border-radius: 0 50px 50px 0;
-}
-
-/* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
-
-.box {
+.btns {
   width: 70%;
   text-align: center;
   margin-left: 15%;
   margin-right: 15%;
 }
 
-.album {
+.btns.box {
+  padding: 20px;
+  background-color: var(--background);
+  height: 10vh;
+  margin-top: 15px;
+}
+
+button {
+  font-size: 1.25rem;
+  border: none;
+  padding: 10px 80px;
+  font-family: "Times New Roman", Times, serif;
   position: relative;
-  height: 400px;
-  /* width: 80%; */
-  align-items: center;
-  /* overflow: auto; */
+  /* color: var(--white); */
+  font-weight: bold;
+  background-color:transparent;
 }
-figure {
-  border-radius: 12px;
-  height: 50%;
-  width: 50%;
+
+.active {
+  background-image: linear-gradient(to right, var(--accent), purple);
+  color: var(--white);
+  border-radius: 6px;
 }
+
+button:active {
+  /* background-color: var(--accent); */
+  background-image: linear-gradient(to right, var(--accent), purple);
+  color: var(--white);
+  border-radius: 6px;
+}
+
+
+/* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
+
+
+.album-img-container {
+  width: 70%;
+  height: 20vh;
+  margin: 0 15%;
+  background-color: var(--background);
+}
+
 #album-img {
-  width: 100px;
-  height: 100px;
+  width: var(--album_size);
+  height: var(--album_size);
+  margin: 0 37.5%;
+  border-radius: 12px;
 }
 
 .music-view {
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--background);
+  width: 70%;
+  margin: 0 15%;
+  height: 40vh;
+  padding: 10px;
 }
 
 .shows-view {
@@ -108,7 +119,23 @@ figure {
 }
 
 .content {
-    overflow: auto;
-    height: 100px;
+  display: block;
+  overflow: auto;
+  width: 500px;
+  height: 300px;
+  border-radius: 12px;
+text-align: center;
+font-size: 1.25rem;
 }
 
+/* ul {
+  text-align: center;
+} */
+
+li {
+  list-style: none;
+}
+
+/* footer {
+  
+} */
