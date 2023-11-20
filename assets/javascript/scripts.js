@@ -1,9 +1,12 @@
 var seatgeekapikey = 'MzgyNjQzMjl8MTY5OTkyMTI0MC4wMjk5NDU';
-var artistbutton = document.querySelector('#redirect');
 
+var artistbutton = document.querySelectorAll('.redirect');
+
+artistbutton.forEach(function(artistbutton) {
 
 artistbutton.addEventListener("click", function () {
-    var artist = artistbutton.dataset.name;
+        var artist = artistbutton.querySelector('.description').getAttribute('data-name');
+        console.log(artist);
     var input = encodeURIComponent(artist);
     var url = 'https://shazam.p.rapidapi.com/search?term='+input+'&locale=en-US&offset=0';
     var options = {
@@ -19,30 +22,15 @@ fetch(url,options)
 .then(data => {
     var songs = data.tracks.hits.map(track => track.track.title);
     console.log(songs)
+
+    localStorage.setItem('artist', artist);
+    localStorage.setItem('songs', JSON.stringify(songs));
+
     })
-    populateSongList()
-})
 
+});
+});
    
-
-
-
-function populateSongList(){
-    var songcontainer = document.getElementById("songcontainer");
-    var ol = document.createElement('ol');
-    songcontainer.append(ol);
-    for (var i = 0; i < songs.length; i++){
-        var songname = document.createElement('li');
-        songname.textContent = i+'. '+song[i];
-        ol.append(songname);
-    }
-    
-}
-
-
-
-
-
 
 function getSongList(){
     var query = document.getElementById('searchBox').value;
@@ -61,6 +49,8 @@ fetch(url,options)
 .then(data => {
     var songs = data.tracks.hits.map(track => track.track.title);
     console.log(songs)
+    localStorage.setItem('artist', query);
+    localStorage.setItem('songs', JSON.stringify(songs));
     })
 }
 
