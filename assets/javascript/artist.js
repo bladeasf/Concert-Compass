@@ -41,15 +41,16 @@ var storedConcerts = JSON.parse(localStorage.getItem('concerts'));
 console.log("storedConcerts:", storedConcerts);
 
 var showscontainer = document.getElementById("songcontainer");
-var ol = document.createElement('ol');
-showscontainer.append(ol);
+
 if (storedConcerts.events.length == 0){
-    var concertinfo = document.createElement('li');
+    var concertinfo = document.createElement('h1');
     concertinfo.textContent = 'No concerts found.'
-    ol.append(concertinfo);
+    showscontainer.append(concertinfo);
 }
 else{
     for (var i = 0; i < storedConcerts.events.length; i++){
+        var ol = document.createElement('ol');
+        showscontainer.append(ol);
         var concertinfo = document.createElement('li');
         concertinfo.textContent = storedConcerts.events[i].title+ " " + storedConcerts.events[i].venue.name + " "+ storedConcerts.events[i].datetime_local;
         ol.append(concertinfo);
