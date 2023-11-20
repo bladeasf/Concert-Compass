@@ -85,6 +85,10 @@ button:active {
   border-radius: 6px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 
 /* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
 
