@@ -44,7 +44,6 @@ nav {
   font-weight: 700;
   font-size: 1.125rem;
 }
-/* TO DO: Condense the logo and a properties to lessen how many times background color style is written */
 /* ------------------------------------------ <<< Logo CSS >>> ----------------------------------------------------- */
 
 #logo {
@@ -100,8 +99,8 @@ button {
   color: var(--white);
   border-radius: 6px;
 }
-/* TODO: ensure that a button stays active when clicked and isn't active when switching */
 
+/* Styles music/shows buttons*/
 button:active {
   /* background-color: var(--accent); */
   background-image: linear-gradient(to right, var(--accent), purple);
@@ -115,14 +114,14 @@ button:hover {
 
 
 /* ------------------------------------------ <<< Viewer Box CSS >>> ---------------------------------------------------- */
-
+/* Styles size of album image container*/
 .album-img-container {
   width: 70%;
   height: 20vh;
   margin: 0 15%;
   background-color: var(--background);
 }
-
+/* Styles size of album artwork image */
 #album-img {
   width: var(--album_size);
   height: var(--album_size);
@@ -155,7 +154,7 @@ button:hover {
   padding-right: 25px;
 }
 
-
+/* Styles size of songs list */
 #songcontainer li {
   font-size: 30px;
 }
