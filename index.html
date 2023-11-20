@@ -1,100 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>ConcertCompass</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <img class="logo" src="assets/Images/Logo.png" alt="ConcertCompass Logo" />
-                </a>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img
+              class="logo"
+              src="assets/Images/Logo.png"
+              alt="ConcertCompass Logo"
+            />
+          </a>
 
-                <button
-                    class="navbar-burger"
-                    aria-label="menu"
-                    aria-expanded="false"
-                    data-target="navbarBasicExample"
+          <button
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="#" href="#">Home</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link navbar-item">Explore</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Trending Artist</a>
+                <a
+                  class="navbar-item"
+                  href="https://www.billboard.com/charts/hot-100/"
+                  >Top 100</a
                 >
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </button>
+              </div>
             </div>
 
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="#" href="#">Home</a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link navbar-item">Explore</a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">Trending Artist</a>
-                            <a class="navbar-item" href="https://www.billboard.com/charts/hot-100/">Top 100</a> 
-                        </div>
-                    </div>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link navbar-item">Cities</a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">NYC</a>
-                            <a class="navbar-item">ATL</a>
-                            <a class="navbar-item">LA</a>
-                        </div>
-                    </div>
-
-                    <div class="dark-mode-toggle">
-                        <button id="theme-toggle">Dark Mode</button>
-                    </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="buttons"></div>
-                </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link navbar-item">Cities</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">NYC</a>
+                <a class="navbar-item">ATL</a>
+                <a class="navbar-item">LA</a>
+              </div>
             </div>
-        </nav>
+
+            <div class="dark-mode-toggle">
+              <button id="theme-toggle">Dark Mode</button>
+            </div>
+          </div>
+
+          <div class="navbar-end">
+            <div class="buttons"></div>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="search">
-            <input type="text" id="searchBox" placeholder="Search for concerts...">
-            <button onclick="searchConcerts()">Search</button>
-            <div id="results"></div>
-            <div id="search-history"></div>
-
-        </section>
+      <section id="search">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Search for concerts..."
+        />
+        <button onclick="searchConcerts()">Search</button>
+        <div id="results"></div>
+        <div id="search-history"></div>
+      </section>
+      <div class="trending">
         <h2 class="trending-artists-header">Trending Artists</h2>
         <section class="card-container">
-            <article class="card redirect">
-                <img src="./assets/Images/TAYLORSWIFTphoto Small.jpeg" alt="Taylor Swift">
-                <h3 class="card-title">Taylor Swift</h3> <!-- Title header added -->
-                <div data-name= 'Taylor Swift' class="description">"Taylor Swift is that rarest of pop phenomena: a superstar who managed to completely cross over from country to the mainstream, becoming an enduring pop culture icon..."</div>
-            </article>
-            <article class="card redirect">
-                <img src="./assets/Images/KANYEWESTphoto Small.jpeg" alt="Kanye West">
-                <h3 class="card-title">Kanye West</h3> <!-- Title header added -->
-                <div data-name= 'Kanye West' class="description">"One of the most influential, critically-landed, and controversial artists of the 21st century, American rapper and producer Kanye West went from hip-hop beatmaker to worldwide hitmaker..."</div>
-            </article>
-            <article class="card redirect">
-                <img src="./assets/Images/SZAphoto Small.jpeg" alt="SZA">
-                <h3 class="card-title">SZA</h3> <!-- Title header added -->
-                <div data-name= 'Sza' class="description">"A distinct force in contemporary R&B, SZA has set herself apart with a vulnerable and casually poetic songwriting style and a voice conveying a multitude of emotions with the subtle twists and turns."</div>
-            </article>
-            <article class="card redirect">
-                <img src="./assets/Images/NKSmall.jpeg" alt="Noah Kahan">
-                <h3 class="card-title">Noah Kahan</h3> <!-- Title header added -->
-                <div data-name= 'Noah Kahan' class="description">"Over the past year, Vermont singer & songwriter Noah Kahan has exploded from his New England roots into the global mainstream and has been touted as one of 2023's biggest and best new artists."</div>
-            </article>
+          <article class="card redirect">
+            <img
+              src="./assets/Images/TAYLORSWIFTphoto Small.jpeg"
+              alt="Taylor Swift"
+            />
+            <h3 class="card-title">Taylor Swift</h3>
+            <!-- Title header added -->
+            <div data-name="Taylor Swift" class="description">
+              "Taylor Swift is that rarest of pop phenomena: a superstar who
+              managed to completely cross over from country to the mainstream,
+              becoming an enduring pop culture icon..."
+            </div>
+          </article>
+          <article class="card redirect">
+            <img
+              src="./assets/Images/KANYEWESTphoto Small.jpeg"
+              alt="Kanye West"
+            />
+            <h3 class="card-title">Kanye West</h3>
+            <!-- Title header added -->
+            <div data-name="Kanye West" class="description">
+              "One of the most influential, critically-landed, and controversial
+              artists of the 21st century, American rapper and producer Kanye
+              West went from hip-hop beatmaker to worldwide hitmaker..."
+            </div>
+          </article>
+          <article class="card redirect">
+            <img src="./assets/Images/SZAphoto Small.jpeg" alt="SZA" />
+            <h3 class="card-title">SZA</h3>
+            <!-- Title header added -->
+            <div data-name="Sza" class="description">
+              "A distinct force in contemporary R&B, SZA has set herself apart
+              with a vulnerable and casually poetic songwriting style and a
+              voice conveying a multitude of emotions with the subtle twists and
+              turns."
+            </div>
+          </article>
+          <article class="card redirect">
+            <img src="./assets/Images/NKSmall.jpeg" alt="Noah Kahan" />
+            <h3 class="card-title">Noah Kahan</h3>
+            <!-- Title header added -->
+            <div data-name="Noah Kahan" class="description">
+              "Over the past year, Vermont singer & songwriter Noah Kahan has
+              exploded from his New England roots into the global mainstream and
+              has been touted as one of 2023's biggest and best new artists."
+            </div>
+          </article>
         </section>
+      </div>
     </main>
-    
 
     <script src="assets/javascript/scripts.js"></script>
-</body>
+  </body>
 </html>
-

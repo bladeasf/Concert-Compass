@@ -71,6 +71,10 @@ body {
   cursor: pointer;
 }
 
+.trending {
+  margin: 2%;
+}
+
 .trending-artists-header {
   text-align: center; /* Center the text horizontally */
   font-size: 2em;     /* Make the font size larger */
