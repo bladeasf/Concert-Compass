@@ -170,3 +170,7 @@ darkthemebutton.addEventListener("click", function () {
     toggleDarkMode();
 })
     
+function getDiscography(){
+    window.location.href = 'artist.html';
+    getSongList();
+}
