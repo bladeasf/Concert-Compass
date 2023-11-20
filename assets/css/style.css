@@ -2,8 +2,10 @@
   --black: #0b090a;
   --white: #ffffff;
   --nav: #161a1d;
-  --primary: #ba181b;
+  --primary: #821517;
   --background: #d3d3d3;
+  --grey: #bfbaba;
+  --darkmode: #171616;
 }
 
 body {
@@ -39,7 +41,7 @@ body {
 
 
 .dark-mode{
-    background-color: #171616;
+    background-color: var(--darkmode);
     color: #bfbaba;
 } 
 
@@ -121,9 +123,10 @@ body {
 }
 
 .footer{
-  background-color: #161a1d;
-  color: #841d1d;
+  background-color:var(--darkmode);
+  color: var(--primary);
   padding: 20px 0;
+  border: 2px solid #bfbaba;
 }
 
 .footer-section{
@@ -136,7 +139,7 @@ body {
 }
 
 .footer a{
-  color: #bfbaba;
+  color: var(--grey);
 }x
 
 .footer a:hover{
@@ -156,7 +159,7 @@ body {
 }
 
 .copyright{
-  color: #bfbaba;
+  color: var(--grey);
 }
 
 li{
