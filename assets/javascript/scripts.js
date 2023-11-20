@@ -33,6 +33,18 @@ artistbutton.addEventListener("click", function () {
         window.location.href = 'artist.html';
         })
 
+        var seatgeekurl = 'https://api.seatgeek.com/2/events?client_id='+seatgeekapikey+'&q='+input+'&taxonomies.name=concert';
+
+        fetch(seatgeekurl)
+            .then(response => response.json())
+            .then(data2 => {
+                displayResults(data2);
+                localStorage.setItem('concerts', JSON.stringify(data2));
+            })
+            .catch(error => console.error('Error:', error));
+    
+
+
     });
     });
     
