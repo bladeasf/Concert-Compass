@@ -145,7 +145,7 @@ button:hover {
   display: none;
 }
 
-.content {
+#songcontainer.content {
   display: block;
   overflow: auto;
   width: 400px;
@@ -154,11 +154,8 @@ button:hover {
   padding-right: 25px;
 }
 
-/* ul {
-  text-align: center;
-} */
 
-li {
+#songcontainer li {
   font-size: 30px;
 }
 
