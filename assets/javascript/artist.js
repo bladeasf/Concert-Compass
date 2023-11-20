@@ -64,6 +64,8 @@ musicbutton.addEventListener("click", function () {
 })
 
 showsbutton.addEventListener("click", function () {
+    showsbutton.classList.add("active");
+    musicbutton.classList.remove("active");
     removeMusic();
     getShows();
 
