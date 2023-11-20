@@ -22,11 +22,14 @@ artistbutton.addEventListener("click", function () {
     .then(data => {
         var songs = data.tracks.hits.map(track => track.track.title);
         var avatar = data.tracks.hits[0].track.share.avatar;
-        console.log(songs)
-        console.log(avatar)
+        var album = data.tracks.hits[0].track.share.image;
+        console.log(songs);
+        console.log(avatar);
+        console.log(album);
         localStorage.setItem('artist', artist);
         localStorage.setItem('songs', JSON.stringify(songs));
         localStorage.setItem('avatar', avatar);
+        localStorage.setItem('album', album)
     
         })
     
@@ -51,11 +54,14 @@ artistbutton.addEventListener("click", function () {
     .then(data => {
         var songs = data.tracks.hits.map(track => track.track.title);
         var avatar = data.tracks.hits[0].track.share.avatar;
-        console.log(songs)
-        console.log(avatar)
-        localStorage.setItem('artist', query);
+        var album = data.tracks.hits[0].track.share.image;
+        console.log(songs);
+        console.log(avatar);
+        console.log(album);
+        localStorage.setItem('artist', artist);
         localStorage.setItem('songs', JSON.stringify(songs));
         localStorage.setItem('avatar', avatar);
+        localStorage.setItem('album', album)
         })
     }
     
